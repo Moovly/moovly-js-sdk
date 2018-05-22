@@ -1,0 +1,30 @@
+{
+  "name": "moovly-js-sdk",
+  "version": "1.0RC-beta",
+  "description": "JavaScript SDK to interact with the Moovly API",
+  "main": "./dist/moovly.js",
+  "module": "./src/moovly.js",
+  "repository": "https://github.com/Moovly/moovly-js-sdk",
+  "author": "Moovly <info@moovly.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel esm --out-dir dist",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-array-includes": "^2.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.24.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "isomorphic-fetch": "^2.2.1",
+    "whatwg-fetch": "^2.0.4"
+  }
+}
