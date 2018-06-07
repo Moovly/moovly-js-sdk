@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "JavaScript SDK to interact with the Moovly API",
   "main": "./dist/moovly.js",
-  "module": "./src/moovly.js",
+  "module": "./dist/moovly.js",
   "repository": "https://github.com/Moovly/moovly-js-sdk",
   "author": "Moovly <info@moovly.com>",
   "license": "MIT",
