@@ -3,7 +3,7 @@ import {API_URL, TOKEN} from "../moovly";
 
 const getMe = () =>
 {
-  return fetch(`${API_URL}/api2/v1/users/me`, {
+  return fetch(`${API_URL}/user/v1/users/me`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${TOKEN}`
