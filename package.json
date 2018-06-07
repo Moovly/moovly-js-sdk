@@ -1,6 +1,6 @@
 {
-  "name": "moovly-js-sdk",
-  "version": "1.0RC-beta",
+  "name": "@moovly/moovly-js-sdk",
+  "version": "1.0.1-RC-beta",
   "description": "JavaScript SDK to interact with the Moovly API",
   "main": "./dist/moovly.js",
   "module": "./src/moovly.js",
@@ -8,7 +8,7 @@
   "author": "Moovly <info@moovly.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel esm --out-dir dist",
+    "build": "npx babel src --out-dir dist",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
