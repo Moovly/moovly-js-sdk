@@ -1,6 +1,6 @@
 {
   "name": "@moovly/moovly-js-sdk",
-  "version": "1.0.1-RC-beta",
+  "version": "1.0.2",
   "description": "JavaScript SDK to interact with the Moovly API",
   "main": "./dist/moovly.js",
   "module": "./src/moovly.js",
