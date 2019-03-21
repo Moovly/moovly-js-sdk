@@ -3,7 +3,7 @@ import {API_URL, TOKEN} from "../moovly";
 
 const get = id =>
 {
-  return fetch(`${API_URL}/api2/v1/projects/${id}`, {
+  return fetch(`${API_URL}/project/v1/projects/${id}`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${TOKEN}`
@@ -20,7 +20,7 @@ const list = (filter = 'unarchived') =>
     throw new Error('The given filter is not supported by the list call. Please us "archived", "unarchived", "all"');
   }
 
-  return fetch(`${API_URL}/api2/v1/projects?filter=${filter}`, {
+  return fetch(`${API_URL}/project/v1/projects?filter=${filter}`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${TOKEN}`
