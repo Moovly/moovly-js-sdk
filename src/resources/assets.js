@@ -58,11 +58,7 @@ const upload = file =>
     throw new Error('The extension ' + extension + ' is not supported in the file upload');
   }
 
-  if (type === 'video') {
-    return createSignedUrl(file).then(uploadVideo);
-  }
-
-  uploadAsset(file);
+  return createSignedUrl(file).then(uploadToSignedUrl);
 };
 
 const trim = (id,  start, end) =>
@@ -89,24 +85,6 @@ const trim = (id,  start, end) =>
     ;
 };
 
-const uploadAsset = file =>
-{
-  let formData = new FormData();
-
-  formData.append('files', file, file.name);
-
-  return fetch("https://api.moovly.com/api2/v1/objects/upload", {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${this.props.token}`,
-    },
-    body: formData
-  })
-    .then(RequestValidator)
-    .then(response => response.json())
-  ;
-};
-
 const createSignedUrl = file =>
 {
   const formData = new FormData();
@@ -125,7 +103,7 @@ const createSignedUrl = file =>
   ;
 };
 
-const uploadVideo = response =>
+const uploadToSignedUrl = response =>
 {
   return fetch(response.url, {
     method: 'PUT',
