@@ -113,7 +113,7 @@ const createSignedUrl = file =>
 
   formData.append('filename', file.name);
 
-  fetch("https://api.moovly.com/api2/v1/objects/upload/video-url", {
+  fetch("https://api.moovly.com/api2/v1/objects", {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${this.props.token}`,
